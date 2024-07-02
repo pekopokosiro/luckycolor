@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>占い結果</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ラッキーカラー占い結果</h1>
+        <div class="result">
+            <p>西暦からの結果: <span class="color-result">{{ seireki }}</span></p>
+            <p>生年月日からの結果: <span class="color-result">{{ birthday }}</span></p>
+            <p>総合結果: <span class="color-result">{{ total }}</span></p>
+        </div>
+        <a href="/" class="btn">戻る</a>
+    </div>
+    <div id="bubbles"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

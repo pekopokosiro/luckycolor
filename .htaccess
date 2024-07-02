@@ -1,0 +1,15 @@
+# WSGIモジュールをロードする
+LoadModule wsgi_module modules/mod_wsgi.so
+
+# FlaskアプリケーションのWSGIエントリーポイントを指定する
+WSGIScriptAlias / /path/to/your/project/app.wsgi
+
+<Directory /path/to/your/project>
+    Require all granted
+</Directory>
+
+# 静的ファイルのディレクトリを指定する
+Alias /static /path/to/your/project/static
+<Directory /path/to/your/project/static>
+    Require all granted
+</Directory>
